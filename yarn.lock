@@ -6142,18 +6142,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spikey/api-requests@workspace:packages/api-requests":
-  version: 0.0.0-use.local
-  resolution: "@spikey/api-requests@workspace:packages/api-requests"
-  languageName: unknown
-  linkType: soft
-
-"@spikey/shared@workspace:packages/shared":
-  version: 0.0.0-use.local
-  resolution: "@spikey/shared@workspace:packages/shared"
-  languageName: unknown
-  linkType: soft
-
 "@spikey/source@workspace:.":
   version: 0.0.0-use.local
   resolution: "@spikey/source@workspace:."
@@ -6242,7 +6230,7 @@ __metadata:
     "@vitest/coverage-v8": "npm:~0.34.6"
     "@vitest/ui": "npm:~0.34.6"
     apexcharts: "npm:^3.44.2"
-    autoprefixer: "npm:^10.0.1"
+    autoprefixer: "npm:10.4.13"
     axios: "npm:^1.0.0"
     babel-jest: "npm:^29.4.1"
     bcrypt: "npm:^5.1.1"
@@ -6284,7 +6272,7 @@ __metadata:
     orval: "npm:^6.23.0"
     passport: "npm:^0.7.0"
     passport-jwt: "npm:^4.0.1"
-    postcss: "npm:^8"
+    postcss: "npm:8.4.21"
     prettier: "npm:^3.1.0"
     prettier-plugin-tailwindcss: "npm:^0.5.7"
     prisma: "npm:^5.8.1"
@@ -9956,7 +9944,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.0.1, autoprefixer@npm:^10.4.9":
+"autoprefixer@npm:10.4.13":
+  version: 10.4.13
+  resolution: "autoprefixer@npm:10.4.13"
+  dependencies:
+    browserslist: "npm:^4.21.4"
+    caniuse-lite: "npm:^1.0.30001426"
+    fraction.js: "npm:^4.2.0"
+    normalize-range: "npm:^0.1.2"
+    picocolors: "npm:^1.0.0"
+    postcss-value-parser: "npm:^4.2.0"
+  peerDependencies:
+    postcss: ^8.1.0
+  bin:
+    autoprefixer: bin/autoprefixer
+  checksum: 0aefb9b115032354201e5a08f5771845dc4c824ca761d8f5b273d6f65429eff84141c5e8e607852d41e4ff1e81449649841e89a4184d23f6ef452fd937898afa
+  languageName: node
+  linkType: hard
+
+"autoprefixer@npm:^10.4.9":
   version: 10.4.16
   resolution: "autoprefixer@npm:10.4.16"
   dependencies:
@@ -10725,6 +10731,13 @@ __metadata:
   version: 1.0.30001576
   resolution: "caniuse-lite@npm:1.0.30001576"
   checksum: 51632942733593f310e581bd91c9558b8d75fbf67160a39f8036d2976cd7df9183e96d4c9d9e6f18e0205950b940d9c761bcfb7810962d7899f8a1179fde6e3f
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001426":
+  version: 1.0.30001581
+  resolution: "caniuse-lite@npm:1.0.30001581"
+  checksum: c2d049514e6af5e9a9b23646b7828191f4c2d3ef1ad999d3efe02683d56d0067d616e2eadb055fe5477f870b22e7252dc09834f95007c95f310d8eca30cfa912
   languageName: node
   linkType: hard
 
@@ -14162,7 +14175,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fraction.js@npm:^4.3.6":
+"fraction.js@npm:^4.2.0, fraction.js@npm:^4.3.6":
   version: 4.3.7
   resolution: "fraction.js@npm:4.3.7"
   checksum: bb5ebcdeeffcdc37b68ead3bdfc244e68de188e0c64e9702197333c72963b95cc798883ad16adc21588088b942bca5b6a6ff4aeb1362d19f6f3b629035dc15f5
@@ -18509,7 +18522,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.3.6, nanoid@npm:^3.3.7":
+"nanoid@npm:^3.3.4, nanoid@npm:^3.3.6, nanoid@npm:^3.3.7":
   version: 3.3.7
   resolution: "nanoid@npm:3.3.7"
   bin:
@@ -20320,6 +20333,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss@npm:8.4.21":
+  version: 8.4.21
+  resolution: "postcss@npm:8.4.21"
+  dependencies:
+    nanoid: "npm:^3.3.4"
+    picocolors: "npm:^1.0.0"
+    source-map-js: "npm:^1.0.2"
+  checksum: 2cdb5be55cc03f3ee717666130570d625cb33f1bc586e5477cabed1b74956f880b89bc7b47ddb14bafaad7534aa2c94c3452a818b0dffcd12baad3b0b26e84cd
+  languageName: node
+  linkType: hard
+
 "postcss@npm:8.4.31":
   version: 8.4.31
   resolution: "postcss@npm:8.4.31"
@@ -20331,7 +20355,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8, postcss@npm:^8.4.14, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.31, postcss@npm:^8.4.32":
+"postcss@npm:^8.4.14, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.31, postcss@npm:^8.4.32":
   version: 8.4.33
   resolution: "postcss@npm:8.4.33"
   dependencies:

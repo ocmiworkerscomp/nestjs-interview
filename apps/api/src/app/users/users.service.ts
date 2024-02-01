@@ -7,7 +7,6 @@ import { type ExtendedPrismaClient } from '@spikey/api/prisma/extended-prisma-cl
 import { CustomPrismaService } from 'nestjs-prisma';
 import { HashService } from '@spikey/api/app/auth/hash.service';
 import { UserType } from '@spikey/shared/types';
-import { getPermissions } from '@spikey/shared/permissions';
 import { StatusCodes } from 'http-status-codes';
 import { error } from '@spikey/shared/responses';
 
@@ -17,19 +16,21 @@ export class UsersService {
     @Inject('PrismaService')
     private prisma: CustomPrismaService<ExtendedPrismaClient>,
     private eventEmitter: EventEmitter2,
-    private hashService: HashService
-  ) {
-  }
+    private hashService: HashService,
+  ) {}
 
   async create(createUserDto: CreateUserDto) {
     if (await this.findByEmail(createUserDto.email)) {
-      error(StatusCodes.UNPROCESSABLE_ENTITY, 'The user with this email already exists');
+      error(
+        StatusCodes.UNPROCESSABLE_ENTITY,
+        'The user with this email already exists',
+      );
     }
 
     createUserDto.password = this.hashService.hash(createUserDto.password);
 
     const user = await this.prisma.client.user.create({
-      data: createUserDto
+      data: createUserDto,
     });
 
     this.eventEmitter.emit('user.created', new UserCreatedEvent(user));
@@ -58,9 +59,8 @@ export class UsersService {
 
     const _user: UserType = {
       ...user,
-      permissions: getPermissions(user.role)
+      permissions: [],
     };
-
 
     return _user;
   }
@@ -71,7 +71,7 @@ export class UsersService {
     }
     return this.prisma.client.user.update({
       where: { id },
-      data: updateUserDto
+      data: updateUserDto,
     });
   }
 

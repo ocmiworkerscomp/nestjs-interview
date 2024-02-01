@@ -11,30 +11,16 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "typeRoots": ["node_modules/@types"],
     "paths": {
-      "@spikey/api-requests/*": [
-        "./packages/api-requests/src/*"
-      ],
-      "@spikey/api/*": [
-        "./apps/api/src/*"
-      ],
-      "@spikey/shared/*": [
-        "./packages/shared/src/lib/*"
-      ]
+      "@spikey/api-requests/*": ["./packages/api-requests/src/*"],
+      "@spikey/api/*": ["./apps/api/src/*"],
+      "@spikey/shared/*": ["./packages/shared/src/lib/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

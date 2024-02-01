@@ -1,7 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "jsx": "preserve",
     "allowJs": true,
     "esModuleInterop": true,
@@ -17,17 +16,10 @@
         "name": "next"
       }
     ],
-    "types": ["jest", "node"],
-    "paths": {
-      "@/*": ["./src/*"],
-      "auth": ["./auth"],
-      "@/root/*": ["./*"]
-    }
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "commonjs"
-    }
+    "types": [
+      "jest",
+      "node"
+    ]
   },
   "include": [
     "**/*.ts",
@@ -37,8 +29,7 @@
     "../../apps/frontend/.next/types/**/*.ts",
     "../../dist/apps/frontend/.next/types/**/*.ts",
     "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "node_modules/.prisma/client/index.d.ts"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
