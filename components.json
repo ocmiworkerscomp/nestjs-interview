@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": true,
+  "tailwind": {
+    "config": "packages/frontend/tailwind.config.js",
+    "css": "packages/frontend/src/app/global.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@spikey/frontend/ui/components",
+    "utils": "@spikey/frontend/lib"
+  }
+}

@@ -124,3 +124,6 @@ Using any of the following tools in your project is a big plus:
 - React Query
 - shadcn / Tailwind
 - Zustand
+
+Notes:
+- Install Shadcn component: `yarn shadcn <component>`
