@@ -1,4 +1,9 @@
-# NestJS Practical Assessment
+- [Español](#spanish)
+- [English](#english)
+
+---
+
+# English
 
 ## Table of Contents
 
@@ -21,10 +26,10 @@ IMPORTANT! Ensure you learn about [TIMESHEETS](./docs/timesheet.md) before begin
 
 ### Tool Requirements
 
-You will be required to use at least the following tools:
-NestJS
-TypeScript
-Jest
+You will be required to use at least the following tools:  
+NestJS  
+TypeScript  
+Jest  
 ORM of your choice (Prisma is a HUGE plus)
 
 ### The Task
@@ -72,10 +77,10 @@ Currently, customers can only report weekly payroll.
 
 All employees in the state of Florida must be paid the minimum wage. Here is a reference based on the employee's pay type:
 
-| Pay Type | Amount           |
-|----------|------------------|
-| Hourly   | 12.00 an hour    |
-| Salary   | 480.00 per check |
+| Pay Type | Amount           |  
+|----------|------------------|  
+| Hourly   | 12.00 an hour    |  
+| Salary   | 480.00 per check |  
 
 #### Bonus Items
 
@@ -90,7 +95,7 @@ The higher the code coverage the better!
 Leverage advanced NestJS decorators like OpenAPI / Swagger documentation decorators.
 
 Use Prisma as your ORM of choice.
-___
+___  
 
 ## Helpful Links
 
@@ -107,32 +112,183 @@ Keep in mind, this is a [Nx Monorepo](https://nx.dev/getting-started/intro), so 
 
 1. Install all dependencies:
 
-    ```bash
-    yarn install
-    ```
-
+    ```bash  
+    yarn install  
+    ```  
 2. Install Nx CLI
 
-    ```bash
-    npm i --g nx@latest
-    ```
-
+    ```bash  
+    npm i --g nx@latest  
+    ```  
 3. Ensure all your `apps` have a `.env` file in their root directory. You can copy the `.env.example` file and rename it to `.env`:
 
-    ```bash
-    cp apps/api/.env.example apps/api/.env
-    cp apps/frontend/.env.example apps/frontend/.env
-    
-    # Expand this as needed for other apps.
-    
-    # This goes without saying, but make sure you edit the
-    # `.env` files to match your local environment.
-    
-    ```
+    ```bash  
+    cp apps/api/.env.example apps/api/.env  
+    cp apps/frontend/.env.example apps/frontend/.env              
+    ```  
+4. Run the following commands depending on what you want to do:
+   ```bash
+   # run the API and frontend development servers
+   yarn api:dev
+   yarn frontend:dev
+   
+   # build the API and frontend
+   yarn api:build
+   yarn frontend:build
+   
+   # run tests
+   yarn api:test
+   yarn frontend:test
+   
+   #run e2e tests
+   yarn api:e2e
+   yarn frontend:e2e
+   ```
 
-4. Run the API and frontend development servers:
+# Spanish
 
-    ```bash
-    yarn api:dev
-    yarn frontend:dev
-    ```
+## Tabla de Contenidos
+
+- [OCMI Workers Comp - Etapa 3 Evaluación Práctica](#OCMI-Workers-Comp---Etapa-3-Evaluación-Práctica)
+  - [Requisitos de la herramienta](#Requisitos-de-la-herramienta)
+  - [La tarea](#La-tarea)
+    - [Su aplicación debe:](#Su-aplicación-debe)
+    - [Los clientes deben poder:](#Los-clientes-deben-poder)
+    - [Los administradores (empleados de PEOPayGo) deben ser capaces de:](#los-administradores-empleados-de-peopaygo-deben-ser-capaces-de)
+    - [Salario mínimo](#Salario-mínimo)
+    - [Bonificaciones](#Bonificaciones)
+  - [Enlaces útiles](#Enlaces-útiles)
+  - [Cómo empezar](#Cómo-empezar)
+
+## OCMI Workers Comp - Etapa 3 Evaluación Práctica
+
+¡Enhorabuena! De entre cientos de candidatos con talento, has sido seleccionado para participar en la última fase de nuestro proceso de contratación: La evaluación práctica supervisada.
+
+¡IMPORTANTE! Asegúrese de conocer las [Timesheets](./docs/timesheet.md) antes de comenzar este proyecto.
+
+### Requisitos de la herramienta
+
+Deberá utilizar al menos las siguientes herramientas:
+
+- NestJS
+- TypeScript
+- Jest
+- ORM de su elección (Prisma es una GRAN ventaja)
+
+### La tarea
+
+Usted es un ingeniero de software para PEOPayGo, un proveedor líder en la industria de la nómina. Actualmente, los clientes envían todas las horas(timesheets) a PEOPayGo por correo electrónico, y desea modernizar eso.
+
+Para lograr su objetivo, estará construyendo una aplicación NestJS / React donde los clientes pueden informar digitalmente su nómina, y los administradores de PEOPayGo pueden ver todas las presentaciones a través de una interfaz unificada.
+
+Actualmente, los clientes solo pueden informar la nómina semanal.
+
+#### Su aplicación debe:
+
+- [ ] Realizar la validación del lado del cliente y del lado del servidor
+- [ ] Mostrar los errores de validación en los campos de formulario según corresponda
+- [ ] Gestión adecuada de errores esperados e inesperados
+- [ ] Cubrir al menos el 50% de todo el código backend
+- [ ] Cubrir al menos el 50% de todo el código frontend
+- [ ] Demostrar conocimiento de las mejores prácticas de trabajo con NestJS
+
+#### Los clientes deben poder:
+
+- [ ] Autenticación mediante correo electrónico/contraseña estándar
+- [ ] Gestionar (Crear/Leer/Actualizar/Borrar) sus empleados.
+- [ ] Todos los empleados deben tener un nombre, un tipo de pago y el monto del pago (sea por hora o salario).
+- [ ] Las tarifas salariales deben validarse con base en el [Salario Mínimo](#Salario-Mínimo).
+- [ ] Navegar a un timesheet donde los clientes pueden enviar la nómina.
+- [ ] Una tabla con la información de cada empleado en cada fila.
+- [ ] Los empleados por hora deben mostrar una entrada "Horas".
+- [ ] Los clientes deben poder especificar la Fecha de Cheque de la nómina.
+- [ ] Los salarios brutos de cada empleado deben mostrarse en cada fila.
+- [ ] El salario bruto total del timesheet debe mostrarse en la parte de abajo.
+- [ ] Ver los timesheets enviados anteriormente con su respectivo estado.
+- [ ] Solo debe poder ver su propia información.
+
+#### Los administradores (empleados de PEOPayGo) deben ser capaces de:
+
+- [ ] Autenticación mediante correo electrónico estándar / autenticación de contraseña
+- [ ] Ver los timesheets enviados por todas las empresas.
+- [ ] Asignar un estado a cualquier timesheet enviado por los clientes.
+- [ ] Redactar una nota en cualquier timesheet enviado por los clientes.
+- [ ] Administrar (crear, editar) cuentas de clientes.
+- [ ] Los clientes deben tener un nombre de la empresa, un correo electrónico y una contraseña.
+
+#### Salario mínimo
+
+Todos los empleados del estado de Florida deben cobrar el salario mínimo. Aquí hay una referencia basada en el tipo de pago del empleado:
+
+| Tipo de pago | Importe           |
+|--------------|-------------------|
+| Por hora     | 12,00 la hora     |
+| Salario      | 480,00 por cheque |
+
+#### Bonificaciones
+
+Entendemos que esta es una tarea desafiante para cualquiera, pero para aquellos candidatos especialmente talentosos, ¡aquí hay algunos puntos extra que pueden ayudarte a destacar!
+
+Intenta implementar patrones de diseño populares en tu aplicación, por ejemplo, podrías aprovechar la arquitectura dirigida por eventos para enviar eventos de hoja de horas en lugar de inyectar servicios directamente.
+
+Notificaciones de apoyo utilizando un enfoque basado en eventos. Mientras que las notificaciones reales no se pueden hacer en CoderPad, hemos construido un falso "bus de notificación" que puede utilizar para presentar las notificaciones en su aplicación.
+
+Cuanto mayor sea la cobertura del código, ¡mejor!
+
+Aprovecha los decoradores avanzados de NestJS como los decoradores de documentación OpenAPI / Swagger.
+
+Utilice Prisma como su ORM de elección.
+
+___
+
+## Enlaces útiles
+
+Puedes encontrar documentación y otra información útil en los siguientes lugares:
+
+- [Nx Monorepo README](https://www.notion.so/ocmi/docs/nx-monorepo.md)
+- [Documentos NestJS](https://docs.nestjs.com/)
+- [Prisma ORM Docs](https://www.prisma.io/docs/)
+- [Documentación de Next.js](https://nextjs.org/docs)
+
+## Cómo empezar
+
+Ten en cuenta que esto es un Nx [Monorepo](https://nx.dev/getting-started/intro), por lo que la estructura del proyecto puede parecer muy diferente de lo habitual.
+
+1. Instala todas las dependencias:
+
+   ```bash
+   yarn install
+   ```
+
+2. Instalar Nx CLI
+
+   ```bash
+   npm i --g nx@latest
+   ```
+
+3. Asegúrate de que todas tus `aplicaciones` tienen un archivo `.env` en su directorio raíz. Puedes copiar el archivo .env `.` example y renombrarlo a `.env`:
+
+   ```bash
+    cp apps/api/.env.example apps/api/.env  
+    cp apps/frontend/.env.example apps/frontend/.env           
+   ```
+
+4. Ejecuta los siguientes comandos dependiendo de lo que quieras hacer:
+
+   ```bash
+   # run the API and frontend development servers
+   yarn api:dev
+   yarn frontend:dev
+   
+   # build the API and frontend
+   yarn api:build
+   yarn frontend:build
+   
+   # run tests
+   yarn api:test
+   yarn frontend:test
+   
+   #run e2e tests
+   yarn api:e2e
+   yarn frontend:e2e
+   ```

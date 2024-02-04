@@ -11,15 +11,13 @@
   },
   "scripts": {
     "api:dev": "nx serve api",
-    "frontend:dev": "nx serve frontend",
     "api:build": "nx build api",
-    "frontend:build": "nx build frontend",
     "api:e2e": "nx e2e api-e2e",
     "api:test": "nx test api",
-    "frontend:e2e": "nx e2e frontend-e2e"
-  },
-  "prisma": {
-    "seed": "yarn database:seed"
+    "frontend:dev": "nx serve frontend",
+    "frontend:build": "nx build frontend",
+    "frontend:e2e": "nx e2e frontend-e2e",
+    "frontend:test": "nx test frontend"
   },
   "ts-node": {
     "compilerOptions": {
