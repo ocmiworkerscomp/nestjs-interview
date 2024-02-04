@@ -140,6 +140,10 @@ Keep in mind, this is a [Nx Monorepo](https://nx.dev/getting-started/intro), so 
    yarn api:test
    yarn frontend:test
    
+   # run tests with coverage
+   yarn api:test-cov
+   yarn frontend:test-cov
+   
    #run e2e tests
    yarn api:e2e
    yarn frontend:e2e
@@ -287,6 +291,10 @@ Ten en cuenta que esto es un Nx [Monorepo](https://nx.dev/getting-started/intro)
    # run tests
    yarn api:test
    yarn frontend:test
+   
+   # run tests with coverage
+   yarn api:test-cov
+   yarn frontend:test-cov
    
    #run e2e tests
    yarn api:e2e

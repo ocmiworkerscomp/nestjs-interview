@@ -14,10 +14,12 @@
     "api:build": "nx build api",
     "api:e2e": "nx e2e api-e2e",
     "api:test": "nx test api",
+    "api:test-cov": "nx test api --coverage",
     "frontend:dev": "nx serve frontend",
     "frontend:build": "nx build frontend",
     "frontend:e2e": "nx e2e frontend-e2e",
-    "frontend:test": "nx test frontend"
+    "frontend:test": "nx test frontend",
+    "frontend:test-cov": "nx test frontend --coverage"
   },
   "ts-node": {
     "compilerOptions": {
