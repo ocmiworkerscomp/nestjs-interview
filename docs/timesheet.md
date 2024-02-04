@@ -122,9 +122,9 @@ Puede imaginarse una timesheet con el siguiente aspecto:
 
 \| Fecha de Cheque: 02/09/2023 | Periodo de Pago: 01/27/2024 - 02/02/2024 |
 
-| Employee | Tipo de pago | Tipo de salario | Horas/Unidades | Salario bruto |
-|----------|--------------|-----------------|----------------|---------------|
-| John     | Por hora     | $12.00          | 20             | $240.00       |
-| Bob      | Salario      | $480.00         | -              | $480.00       |
-|          |              |                 |                |               |
-|          |              | Nómina Bruta    | $720.00        |               |
+| Emploeado | Tipo de pago | Monto de pago | Horas/Unidades | Salario bruto |
+|-----------|--------------|---------------|----------------|---------------|
+| John      | Por hora     | $12.00        | 20             | $240.00       |
+| Bob       | Salario      | $480.00       | -              | $480.00       |
+|           |              |               |                |               |
+|           |              | Nómina Bruta  | $720.00        |               |
