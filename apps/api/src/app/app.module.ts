@@ -2,35 +2,17 @@ import { Module } from '@nestjs/common';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CustomPrismaModule } from 'nestjs-prisma';
-import { AuthModule } from './auth/auth.module';
-import { ConfigModule } from '@nestjs/config';
-import { UsersModule } from './users/users.module';
-import registerConfig from '@spikey/api/config';
-import { RouteListCommand } from '@spikey/api/commands/route-list.command';
-import { EventEmitterModule } from '@nestjs/event-emitter';
-import { ExtendedPrismaService } from '@spikey/api/prisma/extended-prisma.service';
-import { PrismaSeedCommand } from '@spikey/api/commands/prisma-seed.command';
+// import { HelloCommand } from '@ocmi/api/commands/hello.command';
+// import { PrismaModule } from 'nestjs-prisma';
 
 @Module({
   imports: [
-    EventEmitterModule.forRoot({
-      global: true,
-    }),
-    ConfigModule.forRoot({
-      envFilePath: '../../.env',
-      isGlobal: true,
-      load: [...registerConfig()],
-    }),
-    CustomPrismaModule.forRootAsync({
-      name: 'PrismaService',
-      useClass: ExtendedPrismaService,
-      isGlobal: true,
-    }),
-    AuthModule,
-    UsersModule,
+    // PrismaModule,
   ],
   controllers: [AppController],
-  providers: [AppService, RouteListCommand, PrismaSeedCommand],
+  providers: [
+    AppService,
+    // HelloCommand
+  ],
 })
 export class AppModule {}

@@ -22,16 +22,16 @@
       "node_modules/@types"
     ],
     "paths": {
-      "@spikey/api-requests/*": [
+      "@ocmi/api-requests/*": [
         "./packages/api-requests/src/*"
       ],
-      "@spikey/api/*": [
+      "@ocmi/api/*": [
         "./apps/api/src/*"
       ],
-      "@spikey/shared/*": [
+      "@ocmi/shared/*": [
         "./packages/shared/src/lib/*"
       ],
-      "@spikey/frontend/*": [
+      "@ocmi/frontend/*": [
         "./apps/frontend/src/*"
       ]
     }

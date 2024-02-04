@@ -1,5 +1,5 @@
 {
-  "name": "@spikey/source",
+  "name": "@ocmi/source",
   "version": "0.0.0",
   "license": "MIT",
   "workspaces": [
@@ -10,14 +10,13 @@
     "spikey": "dist/apps/api/cli.js"
   },
   "scripts": {
-    "api:command": "node spikey",
-    "database:migrate": "prisma migrate",
-    "database:push": "prisma db push",
-    "database:seed": "npx nx build api && node spikey prisma:seed",
-    "prisma:seed": "prisma db seed",
-    "prisma:generate": "npx prisma generate",
-    "database:validate": "prisma validate",
-    "shadcn": "npx shadcn-ui@latest add  --path=src/ui/components --cwd=apps/frontend"
+    "api:dev": "nx serve api",
+    "frontend:dev": "nx serve frontend",
+    "api:build": "nx build api",
+    "frontend:build": "nx build frontend",
+    "api:e2e": "nx e2e api-e2e",
+    "api:test": "nx test api",
+    "frontend:e2e": "nx e2e frontend-e2e"
   },
   "prisma": {
     "seed": "yarn database:seed"
@@ -56,7 +55,7 @@
     "loglevel-plugin-prefix": "^0.8.4",
     "lucide-react": "^0.312.0",
     "nest-commander": "^3.12.5",
-    "nestjs-prisma": "^0.22.0",
+    "nestjs-prisma": "^0.23.0",
     "next": "^14.0.4",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",

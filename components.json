@@ -9,7 +9,7 @@
     "cssVariables": true
   },
   "aliases": {
-    "components": "@spikey/frontend/ui/components",
-    "utils": "@spikey/frontend/lib"
+    "components": "@ocmi/frontend/ui/components",
+    "utils": "@ocmi/frontend/lib"
   }
 }

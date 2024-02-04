@@ -1,6 +1,6 @@
-import { UserType } from '@spikey/shared/types';
+import { UserType } from '@ocmi/shared/types';
 import { Role } from '@prisma/client';
-import { without } from '@spikey/shared/lodash';
+import { without } from '@ocmi/shared/lodash';
 
 export const HAS_PERMISSION_KEY = 'has_permission';
 

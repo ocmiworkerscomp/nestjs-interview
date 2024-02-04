@@ -17,7 +17,7 @@
 
 Congratulations! Out of hundreds of talanted candidates, you have been selected to participate in the last stage of our hiring process: The supervised practical assessment.
 
-IMPORTANT! Ensure you learn about [TIMESHEETS](./docs/timesheet.md) before beginning this project.
+IMPORTANT! Ensure you learn about [TIMESHEETS]() before beginning this project.
 
 ### Tool Requirements
 

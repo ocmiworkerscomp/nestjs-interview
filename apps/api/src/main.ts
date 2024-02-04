@@ -1,6 +1,6 @@
 import { Logger } from '@nestjs/common';
 import { SwaggerModule } from '@nestjs/swagger';
-import { createSwaggerDocument, getApp, globalPrefix } from '@spikey/api/bootstrap';
+import { createSwaggerDocument, getApp, globalPrefix } from '@ocmi/api/bootstrap';
 import * as process from 'process';
 
 async function bootstrap() {
