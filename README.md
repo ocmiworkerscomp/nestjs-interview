@@ -3,6 +3,16 @@
 
 ---
 
+# PLEASE READ BEFORE YOU BEGIN
+We would like you to keep the following in mind before beginning this assessment:
+
+1. If you do **not** finish this assessment by the due date, please submit whatever work you have done!
+2. Unit testing is an absolute must. You will not move on if you do not demonstrate proper testing practices.
+3. Take your time and do your best. We need to see what your real work looks like, not just a completed app.
+4. Direct any questions to cristian@ocmiwc.com
+
+---
+
 # English
 
 ## Table of Contents
@@ -20,7 +30,7 @@
 
 ## OCMI Workers Comp - Stage 3 Practical Assessment
 
-Congratulations! Out of hundreds of talanted candidates, you have been selected to participate in the last stage of our hiring process: The supervised practical assessment.
+Congratulations! Out of hundreds of talented candidates, you have been selected to participate in the last stage of our hiring process: The supervised practical assessment.
 
 IMPORTANT! Ensure you learn about [TIMESHEETS](./docs/timesheet.md) before beginning this project.
 
