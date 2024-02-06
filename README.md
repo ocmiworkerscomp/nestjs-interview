@@ -130,13 +130,7 @@ Keep in mind, this is a [Nx Monorepo](https://nx.dev/getting-started/intro), so 
     ```bash  
     npm i --g nx@latest  
     ```  
-3. Ensure all your `apps` have a `.env` file in their root directory. You can copy the `.env.example` file and rename it to `.env`:
-
-    ```bash  
-    cp apps/api/.env.example apps/api/.env  
-    cp apps/frontend/.env.example apps/frontend/.env              
-    ```  
-4. Run the following commands depending on what you want to do:
+3. Run the following commands depending on what you want to do:
    ```bash
    # run the API and frontend development servers
    yarn api:dev
@@ -280,14 +274,7 @@ Ten en cuenta que esto es un Nx [Monorepo](https://nx.dev/getting-started/intro)
    npm i --g nx@latest
    ```
 
-3. Asegúrate de que todas tus `aplicaciones` tienen un archivo `.env` en su directorio raíz. Puedes copiar el archivo .env `.` example y renombrarlo a `.env`:
-
-   ```bash
-    cp apps/api/.env.example apps/api/.env  
-    cp apps/frontend/.env.example apps/frontend/.env           
-   ```
-
-4. Ejecuta los siguientes comandos dependiendo de lo que quieras hacer:
+3. Ejecuta los siguientes comandos dependiendo de lo que quieras hacer:
 
    ```bash
    # run the API and frontend development servers
