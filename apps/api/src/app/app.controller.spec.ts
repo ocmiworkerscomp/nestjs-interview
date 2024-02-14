@@ -14,9 +14,9 @@ describe('AppController', () => {
   });
 
   describe('getData', () => {
-    it('should return "Hello World"', () => {
+    it('should return "Holi"', () => {
       const appController = app.get<AppController>(AppController);
-      expect(appController.getHelloWorld()).toEqual({ message: 'Hello World' });
+      expect(appController.getHelloWorld()).toEqual({ message: 'Holi' });
     });
   });
 });
