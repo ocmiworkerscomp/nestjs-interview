@@ -1,20 +1,11 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Req,
-  BadRequestException,
-  Param,
-  Put,
-  UseGuards,
-} from '@nestjs/common';
+import { Controller, Get, Post, Body, Req, BadRequestException, Param, Put, UseGuards } from '@nestjs/common';
 import { Timesheet } from './timesheet.entity';
 import { TimesheetService } from './timesheet.service';
 import { Request } from 'express';
 import { AuthGuard } from '@nestjs/passport';
 import { Roles } from './roles.decorator';
 import { UserRole } from './user-role.enum';
+import { RolesGuard } from './roles.guard'; // Importamos el guardia
 
 @Controller('timesheets')
 export class TimesheetController {
@@ -38,7 +29,7 @@ export class TimesheetController {
   }
 
   @Put('review/:id')
-  @UseGuards(AuthGuard('jwt'))
+  @UseGuards(AuthGuard('jwt'), RolesGuard) // Usamos el guardia aquí
   @Roles(UserRole.ADMIN)
   async reviewTimesheet(
     @Param('id') id: number,
