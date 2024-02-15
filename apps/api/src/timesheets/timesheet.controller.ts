@@ -1,10 +1,24 @@
-import { Controller, Post, Body, BadRequestException } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Req,
+  BadRequestException,
+} from '@nestjs/common';
 import { Timesheet } from './timesheet.entity';
 import { TimesheetService } from './timesheet.service';
+import { Request } from 'express';
 
 @Controller('timesheets')
 export class TimesheetController {
   constructor(private readonly timesheetService: TimesheetService) {}
+
+  @Get()
+  async getTimesheetsForUser(@Req() request: Request) {
+    const userId = request.user.id;
+    return this.timesheetService.getTimesheetsForUser(userId);
+  }
 
   @Post()
   async create(@Body() timesheetData: Timesheet) {

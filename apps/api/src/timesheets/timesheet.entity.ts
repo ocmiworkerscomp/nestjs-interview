@@ -14,5 +14,5 @@ export class Timesheet {
   hourlyRate: number;
 
   @Column()
-  status: string; // Aquí defines la propiedad 'status'
+  status: string;
 }
