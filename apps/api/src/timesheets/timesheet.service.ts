@@ -12,7 +12,7 @@ export class TimesheetService {
 
   async create(timesheetData: Timesheet): Promise<Timesheet> {
     const newTimesheet = this.timesheetRepository.create(timesheetData);
-    newTimesheet.status = 'Pendiente'; 
+    newTimesheet.status = 'Pendiente';
     return await this.timesheetRepository.save(newTimesheet);
   }
 
@@ -21,5 +21,15 @@ export class TimesheetService {
       .createQueryBuilder('timesheet')
       .where('timesheet.userId = :userId', { userId })
       .getMany();
+  }
+
+  async reviewTimesheet(id: number, newStatus: string): Promise<Timesheet> {
+    const timesheet = await this.timesheetRepository.findOne({ where: { id } });
+    if (!timesheet) {
+      return null;
+    }
+
+    timesheet.status = newStatus;
+    return await this.timesheetRepository.save(timesheet);
   }
 }
