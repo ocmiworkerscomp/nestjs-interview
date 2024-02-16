@@ -1,11 +1,21 @@
-import { Controller, Get, Post, Body, Req, BadRequestException, Param, Put, UseGuards } from '@nestjs/common';
+import { 
+  Controller, 
+  Get, 
+  Post, 
+  Body, 
+  Req, 
+  BadRequestException, 
+  Param, 
+  Put, 
+  UseGuards 
+} from '@nestjs/common';
 import { Timesheet } from './timesheet.entity';
 import { TimesheetService } from './timesheet.service';
 import { Request } from 'express';
 import { AuthGuard } from '@nestjs/passport';
 import { Roles } from './roles.decorator';
 import { UserRole } from './user-role.enum';
-import { RolesGuard } from './roles.guard'; // Importamos el guardia
+import { RolesGuard } from './roles.guard'; 
 
 @Controller('timesheets')
 export class TimesheetController {
@@ -19,7 +29,7 @@ export class TimesheetController {
 
   @Post()
   async create(@Body() timesheetData: Timesheet) {
-    if (!isValidTimesheet(timesheetData)) {
+    if (!this.isValidTimesheet(timesheetData)) {
       throw new BadRequestException('Invalid timesheet data');
     }
 
@@ -29,7 +39,7 @@ export class TimesheetController {
   }
 
   @Put('review/:id')
-  @UseGuards(AuthGuard('jwt'), RolesGuard) // Usamos el guardia aquí
+  @UseGuards(AuthGuard('jwt'), RolesGuard) 
   @Roles(UserRole.ADMIN)
   async reviewTimesheet(
     @Param('id') id: number,
@@ -42,14 +52,11 @@ export class TimesheetController {
     return this.timesheetService.reviewTimesheet(id, status);
   }
 
+  private isValidTimesheet(timesheetData: Timesheet): boolean {
+    return timesheetData.hours > 0 && timesheetData.hourlyRate > 0;
+  }
+
   private isValidStatus(status: string): boolean {
     return status === 'Aprobada' || status === 'Rechazada';
   }
-}
-
-function isValidTimesheet(timesheetData: Timesheet): boolean {
-  if (timesheetData.hours <= 0 || timesheetData.hourlyRate <= 0) {
-    return false;
-  }
-  return true;
 }
